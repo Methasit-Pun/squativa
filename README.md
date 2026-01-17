@@ -1,73 +1,79 @@
-# Squativa - the Squat Game
+# Squativa
 
+> Rhythm-based squat game using computer vision • Built at Intania Hackathon
 
+**TL;DR:** Guitar Hero but squat. Camera tracks your form. Compete with friends. Get fit.
 
+## Video Demo
+
+<div align="center">
 
 https://github.com/user-attachments/assets/c9fa4bf5-2ad9-4267-9ed3-0ef721facdf3
 
+</div>
 
-<img width="991" height="572" alt="image" src="https://github.com/user-attachments/assets/fb535a4d-02a8-4955-aa34-877c6f4c1bae" />
-<img width="921" height="593" alt="image" src="https://github.com/user-attachments/assets/43f24576-8a32-41ba-a8fc-f75eaff639f1" />
+## The Product
+
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/fb535a4d-02a8-4955-aa34-877c6f4c1bae" width="49%" />
+  <img src="https://github.com/user-attachments/assets/43f24576-8a32-41ba-a8fc-f75eaff639f1" width="49%" />
+</div>
+
+## Gameplay
+
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/29ad152d-4176-4e43-84c8-9a2c89fed4a7" width="49%" />
+  <img src="https://github.com/user-attachments/assets/0616e05b-efd6-4169-8d94-6b8ed67d0c47" width="49%" />
+</div>
 
 
+## What It Does
 
-![20250330_135509](https://github.com/user-attachments/assets/29ad152d-4176-4e43-84c8-9a2c89fed4a7)
-![20250330_135506](https://github.com/user-attachments/assets/0616e05b-efd6-4169-8d94-6b8ed67d0c47)
-![20250329_231821](https://github.com/user-attachments/assets/3b7b956b-d968-41a0-a7e9-4f0333c9a6a2)
+- ✅ Real-time squat detection via MediaPipe pose estimation
+- ✅ Rhythm-based scoring system synced to music
+- ✅ 2-player competitive mode
+- ✅ Form validation and feedback
+- ✅ Multiple songs + difficulty levels
 
+## Tech Stack
 
+```
+Python 3.10  |  Pygame  |  OpenCV  |  MediaPipe
+```
 
+## Quick Start
 
-Squativa is an interactive fitness game that combines rhythm and squats. Players perform squats in sync with a rhythm pattern while maintaining proper form to score points. The game supports two players and uses a webcam for squat detection.
-Presented by Intania Hackathon
+```bash
+# Clone
+git clone https://github.com/Toodmuk/squativa.git
+cd squativa
 
-## Features
-- **Rhythm-Based Gameplay**: Perform squats in sync with the rhythm pattern.
-- **Real-Time Feedback**: Detects squat form and provides feedback on posture.
-- **Multiplayer Support**: Two players can compete simultaneously.
-- **Custom Songs and Difficulties**: Select songs and difficulty levels.
-- **Dynamic Graphics**: Visual feedback with squat graphics and target zones.
+# Install
+pip install pygame opencv-python mediapipe
 
-## Requirements
-- Python 3.10
-- Pygame
-- OpenCV
-- MediaPipe
+# Run
+python main.py
+```
 
-## Installation
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/Toodmuk/squativa.git
-   cd squativa
-   ```
-2. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-   or
-      ```bash
-   pip install mediapipe
-   pip install opencv-python
-   pip install pygame
-   ```
+That's it. No cap.
 
-## Usage
-1. Run the game:
-   ```bash
-   python main.py
-   ```
-2. Use the menu to select a song and difficulty.
-3. Follow the rhythm and perform squats in front of the webcam.
+## How It Works
 
-## Folder Structure
-- `game.py`: Main game logic.
-- `screens.py`: Handles different game screens (menu, countdown, game, results).
-- `opcv/squat_late.py`: Squat detection using MediaPipe and OpenCV.
-- `utils.py`: Utility functions for loading assets and rendering graphics.
+```
+┌─────────────┐      ┌──────────────┐      ┌─────────────┐
+│  Webcam     │─────▶│  MediaPipe   │─────▶│  Game Logic │
+│  Feed       │      │  Pose Est.   │      │  & Scoring  │
+└─────────────┘      └──────────────┘      └─────────────┘
+```
 
-## Controls
-- **Menu Navigation**: Use the mouse to select options.
-- **Quit**: Press `Q` or `Esc` to exit the game.
+| File | Purpose |
+|------|---------|
+| `main.py` | Entry point |
+| `game.py` | Core game loop + logic |
+| `screens.py` | UI screens (menu, game, results) |
+| `opcv/squat_late.py` | CV squat detection |
+| `utils.py` | Asset loading + rendering |
 
-## License
-This project is for educational purposes only.
+---
+
+Built with 🔥 at Intania Hackathon
