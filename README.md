@@ -12,7 +12,7 @@ https://github.com/user-attachments/assets/c9fa4bf5-2ad9-4267-9ed3-0ef721facdf3
 
 </div>
 
-## The Product
+## The Product Demo on stage
 
 <div align="center">
   <img src="https://github.com/user-attachments/assets/fb535a4d-02a8-4955-aa34-877c6f4c1bae" width="49%" />
